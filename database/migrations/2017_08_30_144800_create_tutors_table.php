@@ -15,6 +15,8 @@ class CreateTutorsTable extends Migration
     {
         Schema::create('tutors', function (Blueprint $table) {
             $table->increments('id');
+            $table->increments('lec_id');
+            $table->increments('unit_id');
             $table->timestamps();
         });
     }

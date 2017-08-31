@@ -15,6 +15,17 @@ class CreateGuardiansTable extends Migration
     {
         Schema::create('guardians', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('stud_id');
+            $table->string('prim_fname');
+            $table->string('prim_sname');
+            $table->string('prim_email');
+            $table->integer('prim_cell');
+            $table->string('prim_rel');
+            $table->string('sec_fname');
+            $table->string('sec_sname');
+            $table->string('sec_email');
+            $table->integer('sec_cell');
+            $table->string('sec_rel');
             $table->timestamps();
         });
     }

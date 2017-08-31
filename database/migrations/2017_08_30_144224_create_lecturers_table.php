@@ -15,6 +15,16 @@ class CreateLecturersTable extends Migration
     {
         Schema::create('lecturers', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('staffno');
+            $table->string('email');
+            $table->string('fname');
+            $table->string('sname');
+            $table->string('identifier');
+            $table->date('dob');
+            $table->blob('pic');
+            $table->string('gender');
+            $table->string('salutation');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
